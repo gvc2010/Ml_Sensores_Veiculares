@@ -3,8 +3,8 @@ Atividade Aprendizagem de Máquina - Spark MLLib
 Considerando o dataset detalhado a seguir, aplique as técnicas solicitadas
 Dataset dados de sensores veicular
 
-    Arquivo disponível em /home/dados/sensores/treinamento.csv
-    Arquivo disponível em /home/dados/sensores/teste.csv
+    Arquivo disponível em /ML_Sensores_Veiculares/treinamento.csv
+    Arquivo disponível em /ML_Sensores_Veiculares/teste.csv
     Dados relativos a sensores de internet das coisas (IoT) para detecção de estados dos medidores
 
 | # | Nome do campo | Descrição | |---- |------------------------- |------------------------------------------------------------------------------- | | 0 | Hora | Hora média das medições | | 1 | Minuto | Minuto médio das medições | | 2 | Temp_minima | Temperatura mínima das medições | | 3 | Temp_maxima | Temperatura máxima das medições | | 4 | Latitude_media | Latitude média das medições | | 5 | Longitude_media | Longitude média das medições | | 6 | Classe | Estado do medidor (Frio, Moderado, Quente, Alerta) |
