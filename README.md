@@ -26,11 +26,13 @@
         Registro de resultados detalhados para facilitar a interpretação e comparação entre os diferentes modelos e abordagens implementadas.
         Este projeto é ideal para quem deseja aprender e aplicar técnicas avançadas de processamento de big data e machine learning utilizando PySpark, especialmente em contextos de análise de dados complexos como os provenientes de sensores veiculares
 
-Arquivo disponível em /ML_Sensores_Veiculares/treinamento.csv
-Arquivo disponível em /ML_Sensores_Veiculares/teste.csv
-Dados relativos a sensores de internet das coisas (IoT) para detecção de estados dos medidores
+      Arquivo disponível em /ML_Sensores_Veiculares/treinamento.csv
+      Arquivo disponível em /ML_Sensores_Veiculares/teste.csv
+      Dados relativos a sensores de internet das coisas (IoT) para detecção de estados dos medidores
 
-| # | Nome do campo | Descrição | |---- |------------------------- |------------------------------------------------------------------------------- | | 0 | Hora | Hora média das medições | | 1 | Minuto | Minuto médio das medições | | 2 | Temp_minima | Temperatura mínima das medições | | 3 | Temp_maxima | Temperatura máxima das medições | | 4 | Latitude_media | Latitude média das medições | | 5 | Longitude_media | Longitude média das medições | | 6 | Classe | Estado do medidor (Frio, Moderado, Quente, Alerta) |
+## Campos
+
+      | # | Nome do campo | Descrição | |---- |------------------------- |------------------------------------------------------------------------------- | | 0 | Hora | Hora média das medições | | 1 | Minuto | Minuto médio das medições | | 2 | Temp_minima | Temperatura mínima das medições | | 3 | Temp_maxima | Temperatura máxima das medições | | 4 | Latitude_media | Latitude média das medições | | 5 | Longitude_media | Longitude média das medições | | 6 | Classe | Estado do medidor (Frio, Moderado, Quente, Alerta) |
 
 Informações a serem extraídas:
 
