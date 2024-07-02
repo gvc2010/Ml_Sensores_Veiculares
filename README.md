@@ -45,9 +45,3 @@ Informações a serem extraídas:
         Árvore de Decisão varie o parametro maxDepth de 1 a 20
         Random Forest varie o numTrees de 1 a 20
 
-Dicas:
-
-    Crie uma célula (Insert -> Insert Cell Below) para cada informação solicitada
-    A análise deve ser feita sobre os dados do HDFS
-    Inicialize o seu cluster executando o script em: Desktop/ambientes/spark/inicializar.sh
-    Acesse o seu cluster executando o script em: Desktop/ambientes/spark/abrir_navegador.sh
