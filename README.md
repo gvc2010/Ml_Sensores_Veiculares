@@ -1,7 +1,25 @@
-## Atividade Aprendizagem de Máquina - Spark MLLib
 
-Considerando o dataset detalhado a seguir, aplique as técnicas solicitadas
-Dataset dados de sensores veicular
+Inicialização do Ambiente Spark: Utilização do SparkSession para iniciar a sessão do Spark, essencial para processamento distribuído de dados.
+
+Carregamento e Preparação dos Dados: Carregamento de conjuntos de dados de treinamento e teste em formato CSV. Os dados são pré-processados, incluindo indexação de classes, conversão de tipos e transformação em vetores para entrada nos modelos de aprendizado de máquina.
+
+Treinamento e Avaliação de Modelos:
+
+Utilização de Árvore de Decisão e Random Forest para treinar modelos de classificação.
+Avaliação da acurácia dos modelos utilizando MulticlassClassificationEvaluator.
+Cálculo de métricas adicionais como falso-negativos e falso-positivos para eventos específicos, como alertas de segurança.
+Otimização e Seleção de Modelos:
+
+Realização de votação entre os modelos treinados para melhorar a precisão da classificação final.
+Busca de parâmetros para otimização dos modelos, como profundidade máxima para Árvore de Decisão e número de árvores para Random Forest.
+Classificação Binária de Eventos:
+
+Implementação de uma abordagem de classificação binária para identificação específica de eventos de alerta nos dados.
+Visualização e Análise de Resultados:
+
+Utilização de gráficos para visualizar a relação entre parâmetros e acurácia dos modelos.
+Registro de resultados detalhados para facilitar a interpretação e comparação entre os diferentes modelos e abordagens implementadas.
+Este projeto é ideal para quem deseja aprender e aplicar técnicas avançadas de processamento de big data e machine learning utilizando PySpark, especialmente em contextos de análise de dados complexos como os provenientes de sensores veiculares
 
     Arquivo disponível em /ML_Sensores_Veiculares/treinamento.csv
     Arquivo disponível em /ML_Sensores_Veiculares/teste.csv
