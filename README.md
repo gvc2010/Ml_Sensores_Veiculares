@@ -1,29 +1,54 @@
-Atividade Aprendizagem de Máquina - Spark MLLib
 
-Considerando o dataset detalhado a seguir, aplique as técnicas solicitadas
-Dataset dados de sensores veicular
+## Inicialização do Ambiente Spark: 
 
-    Arquivo disponível em /home/dados/sensores/treinamento.csv
-    Arquivo disponível em /home/dados/sensores/teste.csv
-    Dados relativos a sensores de internet das coisas (IoT) para detecção de estados dos medidores
+      Utilização do SparkSession para iniciar a sessão do Spark, essencial para processamento distribuído de dados.
 
-| # | Nome do campo | Descrição | |---- |------------------------- |------------------------------------------------------------------------------- | | 0 | Hora | Hora média das medições | | 1 | Minuto | Minuto médio das medições | | 2 | Temp_minima | Temperatura mínima das medições | | 3 | Temp_maxima | Temperatura máxima das medições | | 4 | Latitude_media | Latitude média das medições | | 5 | Longitude_media | Longitude média das medições | | 6 | Classe | Estado do medidor (Frio, Moderado, Quente, Alerta) |
+## Carregamento e Preparação dos Dados:
+
+      Carregamento de conjuntos de dados de treinamento e teste em formato CSV. Os dados são pré-processados, incluindo indexação de classes, conversão de tipos e transformação em vetores para entrada nos modelos de aprendizado de máquina.
+
+## Treinamento e Avaliação de Modelos:
+
+        Utilização de Árvore de Decisão e Random Forest para treinar modelos de classificação.
+        Avaliação da acurácia dos modelos utilizando MulticlassClassificationEvaluator.
+        Cálculo de métricas adicionais como falso-negativos e falso-positivos para eventos específicos, como alertas de segurança.
+        
+## Otimização e Seleção de Modelos:
+
+        Realização de votação entre os modelos treinados para melhorar a precisão da classificação final.
+        Busca de parâmetros para otimização dos modelos, como profundidade máxima para Árvore de Decisão e número de árvores para Random Forest.
+        Classificação Binária de Eventos:
+        Implementação de uma abordagem de classificação binária para identificação específica de eventos de alerta nos dados.
+        
+## Visualização e Análise de Resultados:
+
+        Utilização de gráficos para visualizar a relação entre parâmetros e acurácia dos modelos.
+        Registro de resultados detalhados para facilitar a interpretação e comparação entre os diferentes modelos e abordagens implementadas.
+        Este projeto é ideal para quem deseja aprender e aplicar técnicas avançadas de processamento de big data e machine learning utilizando PySpark, especialmente em contextos de análise de dados complexos como os provenientes de sensores veiculares
+
+      Arquivo disponível em /ML_Sensores_Veiculares/treinamento.csv
+      Arquivo disponível em /ML_Sensores_Veiculares/teste.csv
+      Dados relativos a sensores de internet das coisas (IoT) para detecção de estados dos medidores
+
+## Campos
+
+      | # | Nome do campo | Descrição | |---- |------------------------- |------------------------------------------------------------------------------- | | 0 | Hora | Hora média das medições | | 1 | Minuto | Minuto médio das medições | | 2 | Temp_minima | Temperatura mínima das medições | | 3 | Temp_maxima | Temperatura máxima das medições | | 4 | Latitude_media | Latitude média das medições | | 5 | Longitude_media | Longitude média das medições | | 6 | Classe | Estado do medidor (Frio, Moderado, Quente, Alerta) |
 
 Informações a serem extraídas:
 
-    Calcule a acurácia de classificação na base de testes para os seguintes classificadores:
+## 1 - Calcule a acurácia de classificação na base de testes para os seguintes classificadores:
         Árvore de Decisão (from pyspark.ml.classification import DecisionTreeClassifier)
         Random Forest com 5 arvores (from pyspark.ml.classification import RandomForestClassifier, e numTrees=5 no construtor do RandomForestClassifier)
         Random Forest com 100 arvores (numTrees=100 no construtor do RandomForestClassifier)
-    Determine qual a quantidade de eventos Alerta (label = 3.0) classificados erroneamente como outra classe (falso-negativo) para os classificadores
+## 2 - Determine qual a quantidade de eventos Alerta (label = 3.0) classificados erroneamente como outra classe (falso-negativo) para os classificadores
         Árvore de Decisão (from pyspark.ml.classification import DecisionTreeClassifier)
         Random Forest com 5 arvores (from pyspark.ml.classification import RandomForestClassifier, e numTrees=5 no construtor do RandomForestClassifier)
         Random Forest com 100 arvores (numTrees=100 no construtor do RandomForestClassifier)
-    Determine qual a quantidade de eventos não Alerta (label = 0.0, ou label = 1.0, ou label = 2.0) classificados erroneamente como classe Alerta (falso-positivo) para os classificadores
+## 3 -  Determine qual a quantidade de eventos não Alerta (label = 0.0, ou label = 1.0, ou label = 2.0) classificados erroneamente como classe Alerta (falso-positivo) para os classificadores
         Árvore de Decisão (from pyspark.ml.classification import DecisionTreeClassifier)
         Random Forest com 5 arvores (from pyspark.ml.classification import RandomForestClassifier, e numTrees=5 no construtor do RandomForestClassifier)
         Random Forest com 100 arvores (numTrees=100 no construtor do RandomForestClassifier)
-    Faça votação entre os classificadores da etapa 1.A, 1.B e 1.C para atribuir a classe do evento de acordo com a maioria das classes entre os classificadores
+## 4 - Faça votação entre os classificadores da etapa 1.A, 1.B e 1.C para atribuir a classe do evento de acordo com a maioria das classes entre os classificadores
         Dicas: Para isto, voce irá precisar fazer o join das predições de cada classificador de acordo com os IDs dos eventos. Posteriormente voce pode manipular o dataframe, após o join, para determinar qual classe de cada evento possuiu maior votação =). Exemplo de código:
 
 
@@ -45,9 +70,3 @@ Informações a serem extraídas:
         Árvore de Decisão varie o parametro maxDepth de 1 a 20
         Random Forest varie o numTrees de 1 a 20
 
-Dicas:
-
-    Crie uma célula (Insert -> Insert Cell Below) para cada informação solicitada
-    A análise deve ser feita sobre os dados do HDFS
-    Inicialize o seu cluster executando o script em: Desktop/ambientes/spark/inicializar.sh
-    Acesse o seu cluster executando o script em: Desktop/ambientes/spark/abrir_navegador.sh
