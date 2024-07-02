@@ -1,4 +1,4 @@
-Atividade Aprendizagem de Máquina - Spark MLLib
+## Atividade Aprendizagem de Máquina - Spark MLLib
 
 Considerando o dataset detalhado a seguir, aplique as técnicas solicitadas
 Dataset dados de sensores veicular
@@ -11,19 +11,19 @@ Dataset dados de sensores veicular
 
 Informações a serem extraídas:
 
-    Calcule a acurácia de classificação na base de testes para os seguintes classificadores:
+## 1 - Calcule a acurácia de classificação na base de testes para os seguintes classificadores:
         Árvore de Decisão (from pyspark.ml.classification import DecisionTreeClassifier)
         Random Forest com 5 arvores (from pyspark.ml.classification import RandomForestClassifier, e numTrees=5 no construtor do RandomForestClassifier)
         Random Forest com 100 arvores (numTrees=100 no construtor do RandomForestClassifier)
-    Determine qual a quantidade de eventos Alerta (label = 3.0) classificados erroneamente como outra classe (falso-negativo) para os classificadores
+## 2 - Determine qual a quantidade de eventos Alerta (label = 3.0) classificados erroneamente como outra classe (falso-negativo) para os classificadores
         Árvore de Decisão (from pyspark.ml.classification import DecisionTreeClassifier)
         Random Forest com 5 arvores (from pyspark.ml.classification import RandomForestClassifier, e numTrees=5 no construtor do RandomForestClassifier)
         Random Forest com 100 arvores (numTrees=100 no construtor do RandomForestClassifier)
-    Determine qual a quantidade de eventos não Alerta (label = 0.0, ou label = 1.0, ou label = 2.0) classificados erroneamente como classe Alerta (falso-positivo) para os classificadores
+## 3 -  Determine qual a quantidade de eventos não Alerta (label = 0.0, ou label = 1.0, ou label = 2.0) classificados erroneamente como classe Alerta (falso-positivo) para os classificadores
         Árvore de Decisão (from pyspark.ml.classification import DecisionTreeClassifier)
         Random Forest com 5 arvores (from pyspark.ml.classification import RandomForestClassifier, e numTrees=5 no construtor do RandomForestClassifier)
         Random Forest com 100 arvores (numTrees=100 no construtor do RandomForestClassifier)
-    Faça votação entre os classificadores da etapa 1.A, 1.B e 1.C para atribuir a classe do evento de acordo com a maioria das classes entre os classificadores
+## 4 - Faça votação entre os classificadores da etapa 1.A, 1.B e 1.C para atribuir a classe do evento de acordo com a maioria das classes entre os classificadores
         Dicas: Para isto, voce irá precisar fazer o join das predições de cada classificador de acordo com os IDs dos eventos. Posteriormente voce pode manipular o dataframe, após o join, para determinar qual classe de cada evento possuiu maior votação =). Exemplo de código:
 
 
