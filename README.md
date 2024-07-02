@@ -1,5 +1,6 @@
 
-Inicialização do Ambiente Spark: Utilização do SparkSession para iniciar a sessão do Spark, essencial para processamento distribuído de dados.
+## Inicialização do Ambiente Spark: 
+        Utilização do SparkSession para iniciar a sessão do Spark, essencial para processamento distribuído de dados.
 
 Carregamento e Preparação dos Dados: Carregamento de conjuntos de dados de treinamento e teste em formato CSV. Os dados são pré-processados, incluindo indexação de classes, conversão de tipos e transformação em vetores para entrada nos modelos de aprendizado de máquina.
 
