@@ -249,14 +249,6 @@ plt.ylabel('Acurácia')
 plt.grid(True)
 plt.show()
 
-# Importação das bibliotecas necessárias
-from pyspark.sql import SparkSession
-from pyspark.ml import Pipeline
-from pyspark.ml.feature import VectorAssembler, StringIndexer
-from pyspark.ml.classification import DecisionTreeClassifier, RandomForestClassifier
-from pyspark.ml.evaluation import MulticlassClassificationEvaluator
-import pyspark.sql.functions as func
-
 
 
 
