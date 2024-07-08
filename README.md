@@ -70,3 +70,7 @@ Informações a serem extraídas:
         Árvore de Decisão varie o parametro maxDepth de 1 a 20
         Random Forest varie o numTrees de 1 a 20
 
+## Licença
+
+Este projeto está licenciado sob a licença Creative Commons Attribution 4.0 International (CC BY 4.0) - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
